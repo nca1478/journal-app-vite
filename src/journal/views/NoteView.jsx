@@ -1,20 +1,20 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Button, Grid, IconButton, TextField, Typography } from '@mui/material'
 import {
   DeleteOutline,
   SaveOutlined,
   UploadOutlined,
 } from '@mui/icons-material'
-import { Button, Grid, IconButton, TextField, Typography } from '@mui/material'
 import Swal from 'sweetalert2'
 import { useForm } from '../../hooks'
+import { ImageGallery } from '../components'
 import {
   setActiveNote,
   startDeletingNote,
   startSaveNote,
   startUploadingFiles,
 } from '../../store/journal'
-import { ImageGallery } from '../components'
 
 export const NoteView = () => {
   const dispatch = useDispatch()

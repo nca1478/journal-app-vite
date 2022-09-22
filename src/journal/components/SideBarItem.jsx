@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { useDispatch } from 'react-redux'
 import {
   Grid,
   ListItem,
@@ -7,7 +8,6 @@ import {
   ListItemText,
 } from '@mui/material'
 import { TurnedInNot } from '@mui/icons-material'
-import { useDispatch } from 'react-redux'
 import { setActiveNote } from '../../store/journal'
 
 export const SideBarItem = ({ title = '', body, id, date, imageUrls = [] }) => {
