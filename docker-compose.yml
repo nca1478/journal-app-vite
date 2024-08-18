@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  web:
+    container_name: journal-app-vite
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_APIKEY=${VITE_APIKEY}
+      - VITE_AUTH_DOMAIN=${VITE_AUTH_DOMAIN}
+      - VITE_PROJECT_ID=${VITE_PROJECT_ID}
+      - VITE_STORAGE_BUCKET=${VITE_STORAGE_BUCKET}
+      - VITE_MESSAGING_SENDERID=${VITE_MESSAGING_SENDERID}
+      - VITE_APPID=${VITE_APPID}
+      - VITE_CLOUD_NAME=${VITE_CLOUD_NAME}
+      - VITE_UPLOAD_PRESET=${VITE_UPLOAD_PRESET}
+    volumes:
+      - .:/app
+      - /app/node_modules

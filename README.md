@@ -55,17 +55,22 @@
 
 ## Requerimientos
 
-- Nodejs v20.
-- React v18.
+- Nodejs v18 o superior.
+- Docker Desktop.
 
 ## Instalación
 
-> yarn install
+## Variables de entorno
 
-## Ejecutar la aplicación
+- Renombrar .env.example a .env.
+- Agregar los valores de las credenciales de firebase y cloudinary al .env.
 
-> yarn dev
+## Instalar aplicación
 
-## Enter file
+- Ejecutar el comando: `docker compose up --build -d`
+- Para eliminar: `docker compose down --volumes`
+- Url app: `http://localhost:3000`
 
-> /src/index.js
+## Archivo de Entrada
+
+> src/main.jsx
